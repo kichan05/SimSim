@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/txt_main_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <data>
 
-        android:text="대충 센서 값"
+    </data>
 
-        android:layout_gravity="center"
-        />
+    <FrameLayout
+        android:id="@+id/layout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/img_main_fox"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
 
-        android:src="@drawable/bosong_fox_23"
-        />
+            android:layout_gravity="center">
 
-</FrameLayout>
+            <TextView
+                android:id="@+id/txt_main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="대충 센서 값"
+                android:layout_gravity="center" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_main_state"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:text="정보"-->
+<!--                android:layout_gravity="center" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_main_imgState"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:text="이미지"-->
+<!--                android:layout_gravity="center" />-->
+
+            <TextView
+                android:id="@+id/txt_main_imgSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="속도 : 10"
+                android:textSize="24sp"
+                android:layout_gravity="center"
+                />
+
+            <SeekBar
+                android:id="@+id/sb_main_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:min="0"
+                android:value="10"
+                android:max="100"
+                />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img_main_fox"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_gravity="center"
+
+            android:src="@drawable/bosong_fox_23" />
+
+    </FrameLayout>
+</layout>
